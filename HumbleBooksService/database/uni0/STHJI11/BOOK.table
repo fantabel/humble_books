@@ -1,0 +1,614 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<table xmlns="http://xmlns.oracle.com/jdeveloper/1211/offlinedb">
+  <name>BOOK</name>
+  <columns>
+    <column>
+      <name>ID</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>ID</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">459934</identifier>
+              <schemaName>STHJI11</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>NAME</name>
+      <dataTypeUsage>
+        <attributeValues>
+          <entry>
+            <key>size</key>
+            <value class="java.lang.Long">50</value>
+          </entry>
+          <entry>
+            <key>unit</key>
+            <value class="java.lang.String">BYTE</value>
+          </entry>
+        </attributeValues>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>VARCHAR2</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>NAME</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">459934</identifier>
+              <schemaName>STHJI11</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>AUTHOR_ID</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>false</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>AUTHOR_ID</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">459934</identifier>
+              <schemaName>STHJI11</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+    <column>
+      <name>BUNDLE_ID</name>
+      <dataTypeUsage>
+        <dataTypeID class="oracle.javatools.db.datatypes.DataTypeID">
+          <typeName>NUMBER</typeName>
+        </dataTypeID>
+      </dataTypeUsage>
+      <notNull>true</notNull>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>BUNDLE_ID</name>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">459934</identifier>
+              <schemaName>STHJI11</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <type>COLUMN</type>
+          </value>
+        </entry>
+      </properties>
+    </column>
+  </columns>
+  <constraints>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>BOOK_AUTHOR_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>AUTHOR_ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>BOOK</name>
+            <schemaName>STHJI11</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>STHJI11</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <onDeleteAction>NO_ACTION</onDeleteAction>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>BOOK_AUTHOR_FK</name>
+            <childObjectNames>
+              <childObjectName>AUTHOR_ID</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">459934</identifier>
+              <schemaName>STHJI11</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>FKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>AUTHOR_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>AUTHOR</name>
+          <schemaName>STHJI11</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>STHJI11</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.FKConstraint">
+      <name>BOOK_BUNDLE_FK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>BUNDLE_ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>BOOK</name>
+            <schemaName>STHJI11</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>STHJI11</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <onDeleteAction>NO_ACTION</onDeleteAction>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>BOOK_BUNDLE_FK</name>
+            <childObjectNames>
+              <childObjectName>BUNDLE_ID</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">459934</identifier>
+              <schemaName>STHJI11</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>FKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+      <referenceID class="oracle.javatools.db.NameBasedID">
+        <name>BUNDLE_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>BUNDLE</name>
+          <schemaName>STHJI11</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>STHJI11</schemaName>
+        <type>CONSTRAINT</type>
+      </referenceID>
+    </constraint>
+    <constraint class="oracle.javatools.db.PKConstraint">
+      <name>BOOK_PK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>ID</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>BOOK</name>
+            <schemaName>STHJI11</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>STHJI11</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>BOOK_PK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>BOOK</name>
+          <schemaName>STHJI11</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>STHJI11</schemaName>
+        <type>INDEX</type>
+      </indexID>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>BOOK_PK</name>
+            <childObjectNames>
+              <childObjectName>ID</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">459934</identifier>
+              <schemaName>STHJI11</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>PKConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+    <constraint class="oracle.javatools.db.UniqueConstraint">
+      <name>BOOK_NAME_UK</name>
+      <columnIDs>
+        <columnID class="oracle.javatools.db.NameBasedID">
+          <name>NAME</name>
+          <parent class="oracle.javatools.db.NameBasedID">
+            <name>BOOK</name>
+            <schemaName>STHJI11</schemaName>
+            <type>TABLE</type>
+          </parent>
+          <schemaName>STHJI11</schemaName>
+          <type>COLUMN</type>
+        </columnID>
+      </columnIDs>
+      <enabled>true</enabled>
+      <indexID class="oracle.javatools.db.NameBasedID">
+        <name>BOOK_NAME_UK</name>
+        <parent class="oracle.javatools.db.NameBasedID">
+          <name>BOOK</name>
+          <schemaName>STHJI11</schemaName>
+          <type>TABLE</type>
+        </parent>
+        <schemaName>STHJI11</schemaName>
+        <type>INDEX</type>
+      </indexID>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>BOOK_NAME_UK</name>
+            <childObjectNames>
+              <childObjectName>NAME</childObjectName>
+            </childObjectNames>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">459934</identifier>
+              <schemaName>STHJI11</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <subType>UniqueConstraint</subType>
+            <type>CONSTRAINT</type>
+          </value>
+        </entry>
+      </properties>
+    </constraint>
+  </constraints>
+  <indexes>
+    <index>
+      <name>BOOK_AUTHOR_FK_I</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>AUTHOR_ID</expressionSource>
+          <orderType>ASC</orderType>
+          <properties>
+            <entry>
+              <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+              <value class="oracle.javatools.db.ReferenceID">
+                <name>AUTHOR_ID</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>BOOK_AUTHOR_FK_I</name>
+                  <identifier class="java.math.BigDecimal">459941</identifier>
+                  <parent class="oracle.javatools.db.ReferenceID">
+                    <name>BOOK</name>
+                    <identifier class="java.math.BigDecimal">459934</identifier>
+                    <schemaName>STHJI11</schemaName>
+                    <type>TABLE</type>
+                  </parent>
+                  <schemaName>STHJI11</schemaName>
+                  <type>INDEX</type>
+                </parent>
+                <type>IndexObject</type>
+              </value>
+            </entry>
+          </properties>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>NORMAL</indexType>
+      <parallelDegree>1</parallelDegree>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>BOOK_AUTHOR_FK_I</name>
+            <identifier class="java.math.BigDecimal">459941</identifier>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">459934</identifier>
+              <schemaName>STHJI11</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>STHJI11</schemaName>
+            <type>INDEX</type>
+          </value>
+        </entry>
+        <entry>
+          <key>OracleStorageProperties</key>
+          <value class="oracle.javatools.db.ora.OracleStorageProperties">
+            <bufferMode>DEFAULT</bufferMode>
+            <initrans>2</initrans>
+            <logging>true</logging>
+            <percentFree>10</percentFree>
+            <tablespaceID class="oracle.javatools.db.ReferenceID">
+              <name>USERS</name>
+              <type>TABLESPACE</type>
+            </tablespaceID>
+          </value>
+        </entry>
+      </properties>
+      <reverse>false</reverse>
+      <schema>
+        <name>STHJI11</name>
+      </schema>
+      <systemGenerated>false</systemGenerated>
+    </index>
+    <index>
+      <name>BOOK_BUNDLE_FK_I</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>BUNDLE_ID</expressionSource>
+          <orderType>ASC</orderType>
+          <properties>
+            <entry>
+              <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+              <value class="oracle.javatools.db.ReferenceID">
+                <name>BUNDLE_ID</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>BOOK_BUNDLE_FK_I</name>
+                  <identifier class="java.math.BigDecimal">459942</identifier>
+                  <parent class="oracle.javatools.db.ReferenceID">
+                    <name>BOOK</name>
+                    <identifier class="java.math.BigDecimal">459934</identifier>
+                    <schemaName>STHJI11</schemaName>
+                    <type>TABLE</type>
+                  </parent>
+                  <schemaName>STHJI11</schemaName>
+                  <type>INDEX</type>
+                </parent>
+                <type>IndexObject</type>
+              </value>
+            </entry>
+          </properties>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>NORMAL</indexType>
+      <parallelDegree>1</parallelDegree>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>BOOK_BUNDLE_FK_I</name>
+            <identifier class="java.math.BigDecimal">459942</identifier>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">459934</identifier>
+              <schemaName>STHJI11</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>STHJI11</schemaName>
+            <type>INDEX</type>
+          </value>
+        </entry>
+        <entry>
+          <key>OracleStorageProperties</key>
+          <value class="oracle.javatools.db.ora.OracleStorageProperties">
+            <bufferMode>DEFAULT</bufferMode>
+            <initrans>2</initrans>
+            <logging>true</logging>
+            <percentFree>10</percentFree>
+            <tablespaceID class="oracle.javatools.db.ReferenceID">
+              <name>USERS</name>
+              <type>TABLESPACE</type>
+            </tablespaceID>
+          </value>
+        </entry>
+      </properties>
+      <reverse>false</reverse>
+      <schema>
+        <name>STHJI11</name>
+      </schema>
+      <systemGenerated>false</systemGenerated>
+    </index>
+    <index>
+      <name>BOOK_NAME_UK</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>NAME</expressionSource>
+          <orderType>ASC</orderType>
+          <properties>
+            <entry>
+              <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+              <value class="oracle.javatools.db.ReferenceID">
+                <name>NAME</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>BOOK_NAME_UK</name>
+                  <identifier class="java.math.BigDecimal">459940</identifier>
+                  <parent class="oracle.javatools.db.ReferenceID">
+                    <name>BOOK</name>
+                    <identifier class="java.math.BigDecimal">459934</identifier>
+                    <schemaName>STHJI11</schemaName>
+                    <type>TABLE</type>
+                  </parent>
+                  <schemaName>STHJI11</schemaName>
+                  <type>INDEX</type>
+                </parent>
+                <type>IndexObject</type>
+              </value>
+            </entry>
+          </properties>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <parallelDegree>1</parallelDegree>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>BOOK_NAME_UK</name>
+            <identifier class="java.math.BigDecimal">459940</identifier>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">459934</identifier>
+              <schemaName>STHJI11</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>STHJI11</schemaName>
+            <type>INDEX</type>
+          </value>
+        </entry>
+        <entry>
+          <key>OracleStorageProperties</key>
+          <value class="oracle.javatools.db.ora.OracleStorageProperties">
+            <bufferMode>DEFAULT</bufferMode>
+            <initrans>2</initrans>
+            <logging>true</logging>
+            <percentFree>10</percentFree>
+            <tablespaceID class="oracle.javatools.db.ReferenceID">
+              <name>USERS</name>
+              <type>TABLESPACE</type>
+            </tablespaceID>
+          </value>
+        </entry>
+      </properties>
+      <reverse>false</reverse>
+      <schema>
+        <name>STHJI11</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </index>
+    <index>
+      <name>BOOK_PK</name>
+      <columnExpressions>
+        <columnExpression>
+          <expressionSource>ID</expressionSource>
+          <orderType>ASC</orderType>
+          <properties>
+            <entry>
+              <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+              <value class="oracle.javatools.db.ReferenceID">
+                <name>ID</name>
+                <parent class="oracle.javatools.db.ReferenceID">
+                  <name>BOOK_PK</name>
+                  <identifier class="java.math.BigDecimal">459937</identifier>
+                  <parent class="oracle.javatools.db.ReferenceID">
+                    <name>BOOK</name>
+                    <identifier class="java.math.BigDecimal">459934</identifier>
+                    <schemaName>STHJI11</schemaName>
+                    <type>TABLE</type>
+                  </parent>
+                  <schemaName>STHJI11</schemaName>
+                  <type>INDEX</type>
+                </parent>
+                <type>IndexObject</type>
+              </value>
+            </entry>
+          </properties>
+        </columnExpression>
+      </columnExpressions>
+      <indexType>UNIQUE</indexType>
+      <parallelDegree>1</parallelDegree>
+      <properties>
+        <entry>
+          <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+          <value class="oracle.javatools.db.ReferenceID">
+            <name>BOOK_PK</name>
+            <identifier class="java.math.BigDecimal">459937</identifier>
+            <parent class="oracle.javatools.db.ReferenceID">
+              <name>BOOK</name>
+              <identifier class="java.math.BigDecimal">459934</identifier>
+              <schemaName>STHJI11</schemaName>
+              <type>TABLE</type>
+            </parent>
+            <schemaName>STHJI11</schemaName>
+            <type>INDEX</type>
+          </value>
+        </entry>
+        <entry>
+          <key>OracleStorageProperties</key>
+          <value class="oracle.javatools.db.ora.OracleStorageProperties">
+            <bufferMode>DEFAULT</bufferMode>
+            <initrans>2</initrans>
+            <logging>true</logging>
+            <percentFree>10</percentFree>
+            <tablespaceID class="oracle.javatools.db.ReferenceID">
+              <name>USERS</name>
+              <type>TABLESPACE</type>
+            </tablespaceID>
+          </value>
+        </entry>
+      </properties>
+      <reverse>false</reverse>
+      <schema>
+        <name>STHJI11</name>
+      </schema>
+      <systemGenerated>true</systemGenerated>
+    </index>
+  </indexes>
+  <properties>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_CONNECTION</key>
+      <value class="java.lang.String">sthji11@uni0</value>
+    </entry>
+    <entry>
+      <key>OfflineDBConstants.IMPORT_SOURCE_ID</key>
+      <value class="oracle.javatools.db.ReferenceID">
+        <name>BOOK</name>
+        <identifier class="java.math.BigDecimal">459934</identifier>
+        <schemaName>STHJI11</schemaName>
+        <type>TABLE</type>
+      </value>
+    </entry>
+    <entry>
+      <key>OracleInMemoryProperties</key>
+      <value class="oracle.javatools.db.ora.OracleInMemoryProperties">
+        <inMemory>false</inMemory>
+      </value>
+    </entry>
+    <entry>
+      <key>OracleStorageProperties</key>
+      <value class="oracle.javatools.db.ora.OracleStorageProperties">
+        <bufferMode>DEFAULT</bufferMode>
+        <initrans>1</initrans>
+        <logging>true</logging>
+        <percentFree>10</percentFree>
+        <tablespaceID class="oracle.javatools.db.ReferenceID">
+          <name>USERS</name>
+          <type>TABLESPACE</type>
+        </tablespaceID>
+      </value>
+    </entry>
+    <entry>
+      <key>OracleTableProperties</key>
+      <value class="oracle.javatools.db.ora.OracleTableProperties">
+        <parallelDegree>1</parallelDegree>
+        <tableCompression>NOCOMPRESS</tableCompression>
+      </value>
+    </entry>
+    <entry>
+      <key>TableType</key>
+      <value class="oracle.javatools.db.Table$TableType">NORMAL</value>
+    </entry>
+  </properties>
+  <schema>
+    <name>STHJI11</name>
+  </schema>
+</table>
