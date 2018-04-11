@@ -28,6 +28,7 @@
       <string v="oracle.jdeveloper.model.PathsConfiguration/ResourceBundlesContentSet"/>
    </list>
    <list n="listOfChildren">
+      <hash><url n="URL" path="HumbleBooksDocumentation/HumbleBooksDocumentation.jpr"/></hash>
       <hash><url n="URL" path="HumbleBooksPresentation/HumbleBooksPresentation.jpr"/></hash>
       <hash><url n="URL" path="HumbleBooksService/HumbleBooksService.jpr"/></hash>
    </list>
